@@ -32,6 +32,7 @@
               v-for="meetup in meetups"
               :key="meetup.id"
               :src="meetup.src"
+              :to="{ name: 'ShowMeetup', params: { id: meetup.id } }"
               reverse-transition="fade-transition"
               transition="fade-transition"
             >
@@ -57,13 +58,13 @@ export default {
   data: () => ({
     meetups: [
       {
-        id: 'kjhjkdasfh123',
+        id: '1',
         src:
           'https://c1.wallpaperflare.com/preview/919/750/326/banani-dhaka-bangladesh.jpg',
         title: 'Meetup in Dhaka'
       },
       {
-        id: 'fdger343sfh123',
+        id: '2',
         src:
           'https://travelersdiarybd.files.wordpress.com/2016/06/maxresdefault1.jpg',
         title: 'Meetup in Rajshahi'
@@ -81,8 +82,8 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
-  color: rgb(5, 1, 12);
-  background: #d8cfcf38;
+  color: white;
+  background: rgba(0, 0, 0, 0.43);
   padding: 10px;
   font-size: 2em;
 }

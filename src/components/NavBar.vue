@@ -23,7 +23,6 @@
         <v-list-item
           v-for="item in menuItems"
           :key="item.title"
-          router
           :to="{ name: item.route }"
         >
           <v-list-item-icon>
@@ -54,7 +53,6 @@
           text
           v-for="item in menuItems"
           :key="item.title"
-          router
           :to="{ name: item.route }"
         >
           <v-icon left>{{ item.icon }}</v-icon>
@@ -80,7 +78,7 @@ export default {
       },
       { title: 'Profile', icon: 'mdi-account', route: 'Profile' },
       { title: 'Register', icon: 'mdi-account-cog', route: 'Register' },
-      { title: 'Log In', icon: 'mdi-account-plus', route: 'Login' },
+      { title: 'Log In', icon: 'mdi-lock-open', route: 'Login' },
       { title: 'Log Out', icon: 'mdi-account-remove', route: 'Logout' }
     ]
   })
